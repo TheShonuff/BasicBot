@@ -14,7 +14,7 @@ from requests import get
 
 # load_dotenv(".env")
 load_dotenv()
-TOKEN =  os.getenv('DISCORD_TOKEN') # add token here
+TOKEN = os.getenv('DISCORD_TOKEN') # add token here
 GUILD = os.getenv('DISCORD_GUILD')
 
 clientintents = discord.Intents.all()
@@ -107,8 +107,4 @@ async def on_message(message):
 
 bot.run(TOKEN)
 
-    if message.content == '99!':
-        response = random.choice(brooklyn_99_quotes)
-        await message.channel.send(response)
 
-client.run(TOKEN)
