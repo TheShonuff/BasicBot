@@ -72,13 +72,6 @@ async def convertPolar(ctx):
         
         await ctx.send(f'z = {magnitude} \u2221 {phase_angle}')
 
-@bot.event
-async def on_message(message):
-    if message.author == bot.user:
-bot = commands.Bot(command_prefix='b?', intents=clientintents)
-
-client = discord.Client()
-
 @client.event
 async def on_ready():
    print(f'{client.user.name} is connected!')
