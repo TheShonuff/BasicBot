@@ -1,31 +1,24 @@
 import os
 import random 
-<<<<<<< HEAD
 import json
 import math
 import asyncio
 import discord
-import math_functions
+import dotenv
 from dotenv import load_dotenv
 from discord.utils import get
 from discord.ext import tasks,commands
 from requests import get
-=======
-
-import discord
-from dotenv import load_dotenv
-from discord.utils import get
-from discord.ext import tasks,commands
->>>>>>> e4b1171 (Basic structure and connection implemented)
 
 
-load_dotenv(".env")
+
+# load_dotenv(".env")
+load_dotenv()
 TOKEN =  os.getenv('DISCORD_TOKEN') # add token here
 GUILD = os.getenv('DISCORD_GUILD')
 
 clientintents = discord.Intents.all()
 
-<<<<<<< HEAD
 bot = commands.Bot(command_prefix='!')
 
 client = discord.Client()
@@ -82,7 +75,6 @@ async def convertPolar(ctx):
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
-=======
 bot = commands.Bot(command_prefix='b?', intents=clientintents)
 
 client = discord.Client()
@@ -95,13 +87,11 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.author == client.user:
->>>>>>> e4b1171 (Basic structure and connection implemented)
         return
 
     brooklyn_99_quotes = [
         'COOL',('no doubt')
     ]
-<<<<<<< HEAD
     star_wars_quotes = read_quotes("starwars.txt")
 
     if message.content == '99!':
@@ -116,11 +106,9 @@ async def on_message(message):
     await bot.process_commands(message)
 
 bot.run(TOKEN)
-=======
 
     if message.content == '99!':
         response = random.choice(brooklyn_99_quotes)
         await message.channel.send(response)
 
 client.run(TOKEN)
->>>>>>> e4b1171 (Basic structure and connection implemented)
