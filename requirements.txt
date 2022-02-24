@@ -5,4 +5,4 @@ requests==2.26.0
 json5==0.9.6
 jsonschema==3.2.0
 discord.py==1.7.3
-dotenv==0.0.5
+python-dotenv==0.14.0
